@@ -4,7 +4,7 @@
   "description": "LUCAS PEDRO CARECA\r PAULO REGO MELADO\r EDUARDO PINTO MOLE\r GABRIEL KIKO",
   "main": "index.js",
   "scripts": {
-    "devstart": "nodemon index.js"
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
