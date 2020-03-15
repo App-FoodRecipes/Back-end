@@ -1,8 +1,3 @@
 # Back-end
 
-LUCAS PEDRO CARECA
-PAULO REGO MELADO
-EDUARDO PINTO MOLE
-GABRIEL KIKO
-
-
+Instale o npm, depois digite o comando npm install.
