@@ -9,7 +9,7 @@ app.use(routes);
 
 app.listen(3333);
 
-mongoose.connect('mongodb+srv://admin:admin@cluster0-efgsc.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect('process.env.MONGO_URL', {
     useUnifiedTopology: true,
     useNewUrlParser: true,
 }, () => {
