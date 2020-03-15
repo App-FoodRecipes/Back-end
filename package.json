@@ -4,7 +4,7 @@
   "description": "LUCAS PEDRO CARECA\r PAULO REGO MELADO\r EDUARDO PINTO MOLE\r GABRIEL KIKO",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devstart": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/App-FoodRecipes/Back-end#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.9.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
