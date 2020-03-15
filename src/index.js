@@ -1,7 +1,13 @@
-const express = require ('express');
-const mongoose = require ('mongoose');
-
+const express = require('express');
+const mongoose = require('mongoose');
+const routes = require('./routes');
 const app = express();
+
+app.use(express.json());
+
+app.use(routes);
+
+app.listen(3333);
 
 mongoose.connect('mongodb+srv://admin:admin@cluster0-efgsc.mongodb.net/test?retryWrites=true&w=majority', {
     useUnifiedTopology: true,
@@ -9,14 +15,3 @@ mongoose.connect('mongodb+srv://admin:admin@cluster0-efgsc.mongodb.net/test?retr
 }, () => {
     console.log('Banco de Dados conectado');
 });
-
-app.use(express.json());
-
-
-
-
-app.get('/', (req,res) => {
-    return res.send('hello world');
-});
-
-app.listen(3333);
