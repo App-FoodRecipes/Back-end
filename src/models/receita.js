@@ -5,10 +5,10 @@ const ReceitaSchema = new Schema({
         type: String,
         required: true,
     },
-    ingredientes: {
-        type: String,
+    ingredientes: [{
+        type: Array,
         required: true,
-    },
+    }],
     modoPreparo:{
         type:String,
         required: true,

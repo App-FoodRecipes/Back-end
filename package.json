@@ -1,7 +1,7 @@
 {
   "name": "Back-end",
   "version": "1.0.0",
-  "description": "LUCAS PEDRO CARECA\r PAULO REGO MELADO\r EDUARDO PINTO MOLE\r GABRIEL KIKO",
+  "description": "Projeto que saiu da mesa do bar e vai chegar onde ?",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js"
