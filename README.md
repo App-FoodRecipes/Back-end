@@ -12,6 +12,12 @@ Ifome@pc:~$ git clone https://github.com/App-FoodRecipes/Back-end.git
 * Entre no repositorio e instale o npm
 #  [![NPM version][npm-image]][npm-url]
 
+* utilize o npm para que ele instale todas as dependencias do projeto
+
+```console
+Ifome@pc:~$ npm install
+```
+
 * Crie seu arquivo de configuração na raiz do projeto (.ENV) passando suas string de conexão com o banco
 
 * Instale a nodemon para facilitar no desenvolvimento do projeto
