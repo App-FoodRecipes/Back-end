@@ -13,4 +13,6 @@ app.listen(3333);
 mongoose.connect(process.env.MONGO_URL, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
+}, () => {
+    console.log('Banco de Dados conectado');
 });
