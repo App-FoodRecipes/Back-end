@@ -9,9 +9,7 @@ app.use(routes);
 
 app.listen(3333);
 
-mongoose.connect('process.env.MONGO_URL', {
+mongoose.connect('mongodb+srv://admin:admin@cluster0-ykbm6.mongodb.net/test?retryWrites=true&w=majority', {
     useUnifiedTopology: true,
     useNewUrlParser: true,
-}, () => {
-    console.log('Banco de Dados conectado');
 });
