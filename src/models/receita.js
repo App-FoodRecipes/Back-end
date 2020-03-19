@@ -14,7 +14,7 @@ const ReceitaSchema = new Schema({
         required: true,
     },
     infoNutri:{
-        type:Map,
+        type:Array,
     }
 }, {
     timestamps: true,
