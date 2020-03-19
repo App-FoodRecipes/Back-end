@@ -9,7 +9,8 @@ module.exports = {
         const receita = Receita.create({
             nomeReceita, 
             ingredientes,
-            modoPreparo
+            modoPreparo,
+            infoNutri
         })
 
         return res.json(receita);
