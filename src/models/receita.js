@@ -12,6 +12,9 @@ const ReceitaSchema = new Schema({
     modoPreparo:{
         type:String,
         required: true,
+    },
+    infoNutri:{
+        type:Map,
     }
 }, {
     timestamps: true,
