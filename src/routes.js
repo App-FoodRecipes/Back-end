@@ -12,7 +12,7 @@ routes.get('/', (req,res) => {
     return res.send('hello world');
 });
 
-routes.post('/receita', CadastrarReceitaController.store);
+routes.post('/Cadastrarreceita', CadastrarReceitaController.store);
 
 routes.get('/listarReceita', listaController.index);
 
