@@ -6,9 +6,9 @@ const UserSchema = new Schema({
         type: String,
         required: true,
     },
-    password:{
+    passwordhash:{
         type:String,
-        required:true,
+        required: true,
     }
 }, {
     timestamps: true,

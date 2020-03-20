@@ -1,8 +1,9 @@
 const express = require('express');
 const CadastrarReceitaController = require('./controllers/CadastrarReceitaController');
-const listaController = require('./controllers/listarController');
-const listarReceitaIngredientes = require('./controllers/listarReceitaIngredienteController')
-const CadastrarUsuarioController = require('./controllers/CadastrarUsuarioController')
+const listaReceitaController = require('./controllers/listarReceitaController');
+const listarReceitaIngredientes = require('./controllers/listarReceitaIngredienteController');
+const CadastrarUsuarioController = require('./controllers/CadastrarUsuarioController');
+const ListarUsuarioController = require('./controllers/ListarUsuarioController');
 
 const routes = express.Router();
 
@@ -13,11 +14,13 @@ routes.get('/', (req,res) => {
 });
 
 routes.post('/Cadastrarreceita', CadastrarReceitaController.store);
-
-routes.get('/listarReceita', listaController.index);
-
-routes.get('/listarReceitaIngredientes',listarReceitaIngredientes.index);
-
+console.log('path : CadastrarReceita iniciado');
+routes.get('/ListarReceita', listaReceitaController.index);
+console.log('path : listarReceita iniciado');
+routes.get('/ListarReceitaIngredientes',listarReceitaIngredientes.index);
+console.log('path : ListarReceitaIngredientes iniciado');
 routes.post('/CadastrarUsuario', CadastrarUsuarioController.store);
-
+console.log('path : CadastrarUsuario iniciado');
+routes.get('/ListarUsuario', ListarUsuarioController.index);
+console.log('path : ListarUsuario iniciado');
 module.exports = routes;
