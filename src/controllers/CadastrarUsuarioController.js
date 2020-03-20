@@ -12,13 +12,13 @@ module.exports = {
             return res.json("Usuario já cadastrado");
         } else {
 
-        var passwordhash = await bcrypt.hashSync(password, 8);
+            var passwordhash = await bcrypt.hashSync(password, 8);
 
-        const user = User.create({
-            nomeuser, 
-            passwordhash
-        })
-        return res.status(200).send('usuario adicionado com sucesso');
+            const user = User.create({
+                nomeuser, 
+                passwordhash
+            })
+            return res.status(200).send('usuario adicionado com sucesso');
         }  
     }
 }
