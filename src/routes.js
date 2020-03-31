@@ -25,7 +25,7 @@ console.log('path : CadastrarUsuario iniciado');
 routes.get('/ListarUsuario', ListarUsuarioController.index);
 console.log('path : ListarUsuario iniciado');
 
-routes.post('/Logar', LoginController.store);
+routes.post('/Logar', LoginController.index);
 console.log('path : Logar iniciado');
 
 module.exports = routes;
