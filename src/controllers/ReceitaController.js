@@ -1,7 +1,12 @@
 const Receita = require('../models/receita');
 
 module.exports = {
-    store(req, res){
+    async index(req, res) {
+        
+        const listaReceitas = await Receita.find();
+        return res.json(listaReceitas);
+    },
+    async store(req, res){
 
         const { nomeReceita , ingredientes, modoPreparo, infoNutri} = req.body;
         console.log(infoNutri)
@@ -15,4 +20,4 @@ module.exports = {
 
         return res.json(receita);
     }
-}
+};
