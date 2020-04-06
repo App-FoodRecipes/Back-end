@@ -8,6 +8,13 @@ app.use(express.json());
 
 app.use(routes);
 
+
+//var swaggerUi = require('swagger-ui-express'),
+//    swaggerDocument = require('./swagger.json');
+
+//app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+//app.use('/api/v1', routes);
+
 app.listen(3333);
 
 mongoose.connect(process.env.MONGO_URL, {

@@ -15,7 +15,7 @@ module.exports = {
             //var passwordhash = await bcrypt.hashSync(password, 8);
 
             //bcrypt.compare(password, passwordhash, function(err, res) {
-                console.log("logado")
+                //console.log("logado")
             //});
 
             const user = User.create({
@@ -24,5 +24,10 @@ module.exports = {
             })
             return res.status(200).send('usuario adicionado com sucesso');
         }  
+    },
+    async index(req, res) {
+        
+        const listaUsuario = await User.find();
+        return res.json(listaUsuario);
     }
 }
