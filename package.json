@@ -4,7 +4,8 @@
   "description": "Projeto que saiu da mesa do bar e vai chegar onde ?",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
