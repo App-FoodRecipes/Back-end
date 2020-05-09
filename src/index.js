@@ -15,7 +15,9 @@ app.use(routes);
 //app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 //app.use('/api/v1', routes);
 
-app.listen(3333);
+var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
+var server_host = process.env.YOUR_HOST || '0.0.0.0';
+app.listen(server_port);
 
 mongoose.connect(process.env.MONGO_URL, {
     useUnifiedTopology: true,
