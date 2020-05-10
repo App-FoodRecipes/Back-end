@@ -8,16 +8,10 @@ app.use(express.json());
 
 app.use(routes);
 
-
-//var swaggerUi = require('swagger-ui-express'),
-//    swaggerDocument = require('./swagger.json');
-
-//app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-//app.use('/api/v1', routes);
-
 var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
 var server_host = process.env.YOUR_HOST || '0.0.0.0';
 app.listen(server_port);
+console.log("Aplicação iniciada na porta",server_port);
 
 mongoose.connect(process.env.MONGO_URL, {
     useUnifiedTopology: true,

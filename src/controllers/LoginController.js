@@ -1,34 +1,20 @@
 const User = require('../models/usuario');
+const bcrypt = require('bcryptjs');
 
 module.exports = {
     async index(req, res){
 
-        const { nomeuser , password} = req.body;
+        const {nomeuser , password } = req.body;
+
+        const user = await User.findOne({ nomeuser }).select('+password');
+
+        if (!user)
+            return res.status(400).send({error: 'User not found' });
+
+        if (!await bcrypt.compare(password, user.password))
+            return res.status(400).send({error: 'Invalid password'});
         
-        const checkuser = await User.find({
-            "nomeuser" : nomeuser
-        },{
-            "password": 1
-        }
-        );
-        console.log({checkuser});
-        if (password == checkuser){
-            console.log("logado com sucesso")
-        }
-            return res.status(401).send('senha errada');
-            
+        res.send ({ user });
 
-
-        //const verificar = bcrypt.compare(checkuser, password, function(err, res) {
-            // res === true
-        //});
-
-        /** if (verificar){
-            console.log(checkuser);
-            return res.status(200).send('senha retornada');
-        }else{
-            return res.status(401).send('senha errada');
-        }
-    }**/
 }
 }
